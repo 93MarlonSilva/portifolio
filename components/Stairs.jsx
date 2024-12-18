@@ -3,17 +3,23 @@ import { motion } from "framer-motion";
 const stairAnimation = {
   initial: {
     y: "100%", 
-    scale: 0.1, 
+    scale: 0.4, 
     opacity: 1, 
+    rotate: 0,
   },
   animate: {
     y: "0%", 
-    scale: 0.3, 
+    scale: 0.32, 
     opacity: 0, 
+    rotate: 180,
+
   },
+  
   exit: {
     y: "100%", 
-    scale: 0, 
+    scale: 1, 
+    rotate: 20,
+    opacity: 0, 
   },
 };
 
@@ -34,11 +40,11 @@ const Stairs = () => {
             animate="animate"
             exit="exit"
             transition={{
-              duration: 0.6, 
+              duration: 0.8, 
               ease: "easeInOut", 
-              delay: reverseIndex(index) * 0.05, 
+              delay: reverseIndex(index) * 0.001, 
             }}
-            className="h-full w-full bg-green-500 relative rounded-md shadow-lg"
+            className="h-full w-full bg-accent relative rounded-md shadow-lg"
           />
         );
       })}
