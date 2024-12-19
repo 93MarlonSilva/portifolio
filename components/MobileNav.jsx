@@ -33,15 +33,15 @@ const links = [
     const pathname = usePathname();
   return <Sheet>
     <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent"/>
+        <CiMenuFries className="text-[32px] text-customColor "/>
     </SheetTrigger>
     <SheetTitle>
     <div></div>
     </SheetTitle>
     <SheetContent className="flex flex-col">
-    <div className="mt-32 mb-48 text-center text-2xl">
+    <div className="mt-32 mb-40 text-center text-2xl">
     <Link href="/">
-        <h1 className="text-4xl font-semibold text-accent">
+        <h1 className="text-4xl font-semibold text-customColor ">
             Marlon
         </h1>
     </Link>
@@ -54,8 +54,8 @@ const links = [
             key={index} 
             className={`${
                 link.path === pathname &&
-                 "text-accent border-b-2 border-accent"
-                 } text-xl capitalize hover:text-accent transition-all`}
+                 "text-customColor border-b-2 border-customColor "
+                 } text-xl capitalize hover:text-customColor transition-all`}
                 >
                 {link.name}
             </Link>
