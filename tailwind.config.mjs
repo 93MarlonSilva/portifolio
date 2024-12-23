@@ -22,12 +22,12 @@ export default {
 	  },
 	  extend: {
 		colors: {
-		  primary: "#1c1c22",  // Cor principal
+		  primary: "#1c1c22",
 		  accent: {
-			DEFAULT: "#00FF99",  // Cor de destaque
-			hover: "#00e187",    // Cor ao passar o mouse
+			DEFAULT: "#00FF99",  
+			hover: "#00e187",   
 		  },
-		  customColor: "#00a1ff", // Cor personalizada (exemplo)
+		  customColor: "var(--custom-color)",
 		},
 	  },
 	},

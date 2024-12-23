@@ -1,6 +1,7 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
+import Stats from "@/components/ui/Stats";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
@@ -12,10 +13,9 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Texto */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Full Stack Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br />
-              <span className="inline-block mt-10">
+             <span className="text-gray-300"> Hello I'm </span>  <br />
+              <span className="inline-block mt-4">
                 {name.map((char, index) => (
                   <span
                     key={index}
@@ -28,10 +28,10 @@ const Home = () => {
                 ))}
               </span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/89">Text</p>
+            <span className="text-2xl flex justify-center mx-auto text-customColor xl:text-3xl">Full Stack Developer</span>
 
             {/* Botão e Redes Sociais */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-8 mt-10">
               <Button
                 variant="outline"
                 size="lg"
@@ -55,6 +55,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };
